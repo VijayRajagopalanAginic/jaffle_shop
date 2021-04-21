@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: raw_jaffle_shop
+  - name: jaffle_shop
     description: A replica of the postgres database used to power the jaffle_shop app.
 
     freshness:
