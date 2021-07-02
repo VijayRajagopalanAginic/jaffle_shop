@@ -8,7 +8,7 @@ with source as (
 renamed as (
 
     select
-        id as customer_id,
+        id as customer_id1,
         first_name,
         last_name,
         email
