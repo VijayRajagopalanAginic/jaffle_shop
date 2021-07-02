@@ -15,9 +15,23 @@ clean-targets:
     - "dbt_modules"
     - "logs"
 
+# ======
+# Seed Configs
+# ======
+seeds:
+  +enabled: true
+  +database: DEV
+  +schema: legacy
+  +quote_columns: False
+
 models:
   jaffle_shop:
-      materialized: table
-      staging:
-        materialized: view
-        tags: ["staging", "hourly"]
+    +database: DEV
+    materialized: table
+    staging:
+      materialized: view
+      tags: ["staging", "hourly"]
+
+  snowflake_spend:
+    +database: DEV
+    enabled: true
